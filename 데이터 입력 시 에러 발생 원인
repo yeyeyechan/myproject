@@ -1,0 +1,15 @@
+데이터를 입력중에 발생하는 에러 :
+
+다음 두 에러가 1개의 파일을 다 넣는 과정의 마지막에 연달아 출력되었습니다 :
+
+ERROR [AsyncHBase I/O Worker #13] RegionClient: Uncaught error during de-seri
+alization of MultiAction(batch=
+
+ERROR [AsyncHBase I/O Worker #9] RegionClient: Unexpected exception from downstream on [id: 0x44d5dc1d, /127.0.0.1:48656 => /127.0.1.1:35782]
+java.lang.AssertionError: Must not be used.
+
+
+발생 빈도 : 1개의 파일을 올릴 때마다 마지막에 발생
+
+원인 :
+https://github.com/OpenTSDB/asynchbase/issues/183

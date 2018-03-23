@@ -1,0 +1,102 @@
+# Class
+
+## 1) 클래스의 정의
+
+>>>> 특정한 개념이나 모양으로 존재하는 것: 객체(Object) <--- 그러한 객체를 만드는것 클래스 
+
+
+>>>> 클래스는 attribute와 method로 이루어져 있다.
+
+>>>> 위와 같이 모든 개념을 객체로 표현 하는 프로그래밍 방법을 OOP programming 이라고 한다.
+
+>>>>  파이썬에선 숫자 1,2,3 문자 'a', 'b' 리스트 딕셔너리 등이 다 객체이다.
+
+
+## 2) 메서드 작성하기
+
+>>>>  class 클래스이름:
+    	def 메서드(self):
+        코드
+
+>>>>  인스턴스 = 클래스() : EX) james =person() 제임스는 객체, person의 인스턴스
+
+>>>>  제임스 출력시 person.object와 16진수 메모리 주소가 나온다
+
+>>>>  메서드는 클래스가 아니라 인스턴스 (객체)를 통해 호출해야한다(??수정)--> 인스턴스를 통해 호출하는 메서드 =인스턴스 메서드
+
+>>>>  메서드 안에서 클래스안의 메서드 호출 self.메서드()
+
+
+>>>>  isinstance(인스턴스 , 클래스) ---> Boolean
+
+
+
+## 3) 속성 사용하기
+
+>>>>  class 클래스이름:
+    	def __init__(self):
+        	self.속성 = 값
+
+
+>>>>  __init__은 인스턴스가 만들어질때 호출, 인스턴스(객체)를 초기화한다.
+
+>>>>  self는 인스턴스 자기자신을 의미.
+
+>>>>  __init__의 매개변수 self에 들어가는 값은 person()이라 할 수 잇다. 그리고 self 가 완성 된뒤(??) 인스턴스에 할당된다.(머가??)  이후 메서드를 호출하면 현재 인스턴스가 자동으로 매개변수 self에 들어온다.
+
+
+>>>>  class Person:
+    	def __init__(self, name, age, address):
+        	self.hello = '안녕하세요.'
+        	self.name = name
+        	self.age = age
+        	self.address = address
+ 
+    	def greeting(self):
+        	print('{0} 저는 {1}입니다.'.format(self.hello, self.name))
+ 
+maria = Person('마리아', 20, '서울시 서초구 반포동')
+maria.greeting()    # 안녕하세요. 저는 마리아입니다.
+ 
+print('이름:', maria.name)       # 마리아
+print('나이:', maria.age)        # 20
+print('주소:', maria.address)    # 서울시 서초구 반포동
+
+
+>>>>  maria.name 과 같이 인스턴스를 통해 호출 --> 인스턴스 속성
+
+>>>>  속성과 메소드는 클래스의 맴버라고 부른다.
+
+## 키워드 인수, 위치 인수
+
+>>>>  class Person:
+    	def __init__(self, *args):
+        	self.name = args[0]
+        	self.age = args[1]
+        	self.address = args[2]
+ 
+maria = Person(*['마리아', 20, '서울시 서초구 반포동'])
+
+
+>>>>  *args 는 리스트 언패킹 딕셔너리 언패킹은 **args (키워드인수는 딕셔너리랑만 연결 되는 건가??)
+
+
+>>>> class Person:
+...     __slots__ = ['name', 'age']    # name, age만 허용(다른 속성은 생성 제한)
+
+>>>> slots 안의 속성만 허용하겠다 라는 의미 이것을 설정해주면 __init__에서도 그외 의 속성은 못만든 다는 것을 확인함...
+
+
+>>>>  인스턴스 생성 이후에도 속성을 추가 할 수 있음. 메소드 아래에 있는 속성은 그메소드 호출시에 생성됨.
+
+
+## 비공개 속성
+
+
+>>>>  self.__속성 ='값'
+
+>>>>  비공개 속성은 클래스 내에서만 접근 가능 밖에선 호출 변경 불가. private member <---> public member
+
+
+>>>>  비공개 매서드도 마찬가지 __메서드
+

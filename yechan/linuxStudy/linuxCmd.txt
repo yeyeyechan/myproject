@@ -1,0 +1,32 @@
+
+$ sudo apt-get install python 2.7 : 파이썬 까는 명령어
+
+$ sudo apt-get update :우분투 업데이트
+
+$ sudo sudo apt-get upgrade python2.7 : 파이썬 업그레이드
+
+$ sudo [C[C[C[C[C[C[C[C[C[Cs[D[D	[D[D[C[C[C[Cpython --version : 파이선 버전체크
+
+$git diff : 
+
+$ git remote set-url origin https://github.com/username/repo.git : origin 주소를 바꿔줌
+
+$ rm / rmdir : 각각 일 / 디렉토리 제거 명령
+
+$ vi .이름.확장자 : vi 에디터
+
+[A[A[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C i : 입력/ ESC-> :w (저장)/ q!(저장않고 끝내기 / :wq(저장후 끝)
+
+$ cat > 이름.확장자 : 파일을 만든다/ 아예 새로 만든다 원본무시
+
+$ cat >> 이름.확장자 :덧 붙이기
+
+$cat 이름.확장자 : 읽기 모드[A[A[A[A[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C ctrl d : 저장후 빠져나가기
+
+
+[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C[C
+
+$ git pull or git pull origin master
+
+$ git clone 주소
+

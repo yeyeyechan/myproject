@@ -1,0 +1,4 @@
+# 주피터 로그인 
+
+
+cmd 에서 anaconda 설치한곳으로 가서 python.exe -m notebook 하면 로그인 됨
